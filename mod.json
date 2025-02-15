@@ -1,0 +1,43 @@
+{
+	"geode": "4.2.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "prevter.proxyboom",
+	"name": "ProxyBoom",
+	"version": "v1.0.0",
+	"developer": "prevter",
+	"description": "ip ban bypass real",
+	"early-load": true,
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"description": "Enables or disables the proxy",
+			"default": true
+		},
+		"proxy-url": {
+			"type": "string",
+			"name": "Proxy URL",
+			"description": "The URL of the proxy server to use. Only the hostname part!",
+			"filter": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.:/-_0123456789",
+			"default": "localhost:8008"
+		},
+		"disable-ssl": {
+			"type": "bool",
+			"name": "Disable SSL",
+			"description": "Forces all HTTPS requests to use HTTP instead",
+			"default": false
+		},
+		"force-use-proxy": {
+			"type": "bool",
+			"name": "Skip Check",
+			"description": "Disables the check at launch and forces all requests to use the proxy",
+			"default": false,
+			"requires-restart": true
+		}
+	}
+}
